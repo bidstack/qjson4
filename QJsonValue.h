@@ -86,7 +86,7 @@ public:
 	QJsonObject toObject() const;
 	QString toString(const QString &defaultValue = QString()) const;
 	QVariant toVariant() const;
-
+	int toInt(int defaultValue = 0) const;
 public:
 	Type type() const;
 

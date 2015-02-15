@@ -290,6 +290,17 @@ QString QJsonValue::toString(const QString &defaultValue) const {
 }
 
 //------------------------------------------------------------------------------
+// Name: toInt
+//------------------------------------------------------------------------------
+int QJsonValue::toInt(int defaultValue) const {
+	if(isDouble() && (int)value_.n == value_.n) {
+		return value_.n;
+	}
+
+	return defaultValue;
+}
+
+//------------------------------------------------------------------------------
 // Name: toVariant
 //------------------------------------------------------------------------------
 QVariant QJsonValue::toVariant() const {
